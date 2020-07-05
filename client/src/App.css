@@ -1,0 +1,371 @@
+:root {
+  --maincolor: #FF7B79;
+  --maincolor2: #FF85AC;
+  --transmain: rgba(255,123,121,0);
+  --translmain: rgba(255,123,121,0.1);
+  --mainback: white;
+  --maintext: black;
+  --shadowcolor: rgba(0,0,0,0.3);
+  --darkcolor: grey;
+}
+
+html{
+  background-color: var(--mainback);
+}
+
+h1, h2, h3 {
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+}
+p {
+  margin: 0;
+  color: var(--maintext);
+}
+
+
+button{
+  color: var(--maintext);
+  background-color: var(--transmain);
+  outline: none;
+  border: none;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+button:hover{
+  background-color: var(--translmain);
+}
+.abutton{
+  transition: background-color 0.2s;
+}
+
+
+
+.Header{
+  color: var(--maincolor);
+}
+a{
+  text-decoration: none;
+}
+.Header > a:visited{
+  color: var(--maincolor);
+}
+
+.MenuArea{
+  transition: left 0.2s;
+}
+.MenuButton{
+  box-shadow: 0px 3px 8px var(--shadowcolor);
+  border-radius: 4px;
+  background: var(--maincolor);
+  background: linear-gradient(135deg, var(--maincolor), var(--maincolor2));
+  cursor: pointer;
+}
+.Menu{
+  border-left: solid 5px var(--maincolor);
+  background-color: var(--mainback);
+}
+.Menu > button, .Menu > a{
+  text-align: center;
+  color: var(--maincolor);
+  font-size: 18px;
+  background-color: var(--transmain);
+  padding: 10px 0;
+}
+.Menu > button:hover, .Menu > a:hover{
+  background-color: var(--translmain);
+}
+
+
+.GenSectionTitle{
+  color: var(--maincolor);
+}
+.GenListing{
+  /* border: solid 4px var(--maincolor); */
+  box-shadow: 0px 3px 8px var(--shadowcolor);
+  border-radius: 8px;
+}
+.GenListing:hover{
+
+}
+
+.GenListing > .genListBackground > h3{
+  font-size: 18px;
+  color: var(--mainback);
+  text-align: center;
+}
+.GenListing > a{
+  color:white;
+  background-color: var(--maincolor);
+  padding:5px 8px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+.GenListing > a:hover{
+  background-color: var(--maincolor2);
+}
+.GenListing > p{
+  height: 25%;
+  transition: height 0.2s;
+}
+.GenListing:hover > p{
+  /* height: 100%; */
+}
+.genListButton{
+  background-color: var(--maincolor);
+  width:50px;
+  height:50px;
+  min-height:50px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 8px var(--shadowcolor);
+}
+.genListButton:hover{
+  background-color: var(--maincolor2);
+}
+
+
+.Tag{
+  border-radius: 4px;
+  padding: 4px;
+  margin: 2px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+
+.GenInfo{
+  width: 100%;
+}
+.GenOutput{
+  width: 100%;
+  height: 500px;
+}
+.GenItemList{
+  width: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .GenInfo{
+    width: 50%;
+  }
+  .GenOutput{
+    width: 50vw;
+    height: calc(100vh - 70px);
+    position: fixed;
+    right: 0px;
+    top: 70px;
+  }
+  .GenItemList{
+    width: 50%;
+  }
+}
+
+.genInfoBackground{
+  color: var(--mainback);
+  background-size: cover;
+  border-radius: 8px;
+  margin: 6px;
+  padding: 10px;
+}
+.generatorTitle{
+  margin-top: 100px;
+}
+.generatorDescr{
+  margin: 8px 16px;
+}
+.genInfoBackground > div > p, .genInfoBackground > div > .UserPreview > p {
+  color: var(--mainback);
+}
+.genOutputArea{
+  background-color: var(--darkcolor);
+  border-radius: 8px;
+  color: white;
+  margin: 6px;
+  min-height: 200px;
+}
+.GenOutput > button {
+  font-size: 20px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: var(--mainback);
+  background-color: var(--maincolor);
+}
+.GenOutput > button:hover {
+  background-color: var(--maincolor2);
+}
+.genResult{
+  color: var(--mainback);
+  border-bottom: solid 1px var(--maincolor);
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+.genItemListHeader{
+  background-color: var(--maincolor);
+  text-align: left;
+  font-size: 18px;
+  border-radius: 8px;
+  color: white;
+  margin: 6px;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.genItemListHeader:hover{
+  background-color: var(--maincolor2);
+}
+.itemList{
+  width: calc(100% - 50px);
+  margin-left: 25px;
+}
+.addItemButton, .GenItem {
+  text-align: left;
+  border: solid 1px rgba(0,0,0,0.3);
+  border-top: none;
+}
+.itemNumber{
+  width:60px;
+  height:100%;
+  background-color: var(--maincolor);
+  color: var(--mainback);
+  text-align: center;
+}
+
+
+.popupBackground{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 15;
+}
+.AddItemPopup, .NewGeneratorForm{
+  background-color: var(--mainback);
+  border: solid 4px var(--maincolor);
+  box-shadow: 0px 3px 8px var(--shadowcolor);
+  border-radius: 8px;
+}
+.AddItemPopup > h2, .NewGeneratorForm > h2 {
+  text-align: center;
+  background-color: var(--maincolor);
+  color: var(--mainback);
+}
+.AddItemPopup > form, .NewGeneratorForm > form {
+  margin: 10px;
+}
+.AddItemPopup > form > *, .NewGeneratorForm > form > *{
+  margin: 5px;
+  flex-grow: 0;
+}
+.closeButton{
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+
+
+.UserIcon{
+  border-radius: 5px;
+}
+.UserPreview{
+  background-color: var(--transmain);
+  border-radius: 5px;
+  color: var(--maintext);
+  cursor: pointer;
+}
+.UserPreview:hover{
+  background-color: var(--translmain);
+}
+
+
+
+
+
+.SignInPage {
+  border: solid 4px var(--maincolor);
+  box-shadow: 0px 3px 8px var(--shadowcolor);
+  border-radius: 8px;
+}
+.SignInPage > h2 {
+  text-align: center;
+  background-color: var(--maincolor);
+  color: var(--mainback);
+}
+.SignInPage > form {
+  margin: 10px;
+}
+.SignInPage > form > *{
+  margin: 5px;
+}
+label{
+  color: var(--maintext);
+}
+input[type=text],input[type=password],input[type=number],textarea {
+  color: var(--maintext);
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 16px;
+  border: solid 2px var(--maincolor);
+  outline: none;
+}
+input[type=submit] {
+  outline: none;
+  border: none;
+  color: var(--mainback);
+  background-color: var(--maincolor);
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  transition: background-color 0.1s;
+  cursor: pointer;
+}
+input[type=submit]:hover{
+  background-color: var(--maincolor2);
+}
+.SignInPage > button {
+  font-size: 16px;
+  padding: 8px;
+}
+.errorMessage{
+  color: red;
+  background-color: pink;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  border: solid red 2px;
+}
+
+
+
+
+
+
+
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+.fadeInUp {
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both
+}
