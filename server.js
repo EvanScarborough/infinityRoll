@@ -33,7 +33,7 @@ app.use('/api/lists',genlistsRouter);
 app.use('/api/items',genitemsRouter);
 app.use('/api/gen',genRouter);
 
-app.use(express.static('../client/build'));
+app.use(express.static('./client/build'));
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });
