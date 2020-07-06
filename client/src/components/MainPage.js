@@ -31,9 +31,11 @@ class MainPage extends React.Component {
   }
 
   componentDidMount(){
+    console.log(url + "lists/main");
     fetch(url + "lists/main")
       .then(res => res.json())
       .then(data => {
+        console.log(data);
         this.setState({items:data});
       })
       .catch(err => console.log(err));
