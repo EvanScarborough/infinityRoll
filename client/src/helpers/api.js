@@ -1,3 +1,3 @@
-const url = 'infinityroll.com/api/';
+const url = 'http://www.infinityroll.com/api/';
 
 export default url;
