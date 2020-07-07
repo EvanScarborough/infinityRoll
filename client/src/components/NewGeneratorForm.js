@@ -71,7 +71,7 @@ class NewGeneratorForm extends React.Component{
             <label>Example</label>
             <input type="text" id="example" name="example" onChange={this.changeExample}/>
             <label>Tags</label>
-            <div style={{display:"flex",width:"100%",overflow:"auto",paddingBottom:"20px"}}>
+            <div style={{display:"flex",width:"100%",overflow:"auto",paddingBottom:"20px",height:"40px",minHeight:"40px"}}>
               {this.props.tags.map((val,ind)=><Tag key={ind} name={val.name} onClick={()=>this.toggleTag(val._id)} color={(this.state.tags.indexOf(val._id)>=0)?val.color:"#ddd"} />)}
             </div>
             <input type="submit" value="Next" />

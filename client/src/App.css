@@ -231,7 +231,7 @@ a{
 
 .popupBackground{
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -239,6 +239,7 @@ a{
   z-index: 15;
 }
 .AddItemPopup, .NewGeneratorForm{
+  overflow: auto;
   background-color: var(--mainback);
   border: solid 4px var(--maincolor);
   box-shadow: 0px 3px 8px var(--shadowcolor);
@@ -265,6 +266,9 @@ input{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+textarea{
+  min-height: 50px;
 }
 
 
