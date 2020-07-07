@@ -77,11 +77,11 @@ class SignInPage extends React.Component {
           <h2 style={{padding:"10px"}}>Create Account</h2>
           {this.state.message&&<p className="errorMessage">{this.state.message}</p>}
           <form onSubmit={this.submit} style={{display:"flex",flexDirection:"column",alignItems:"stretch"}}>
-            <label>Username</label>
+            <label for="username">Username</label>
             <input type="text" id="username" name="username" onChange={this.changeUsername}/>
-            <label>Email</label>
+            <label for="email">Email</label>
             <input type="text" id="email" name="email" onChange={this.changeEmail}/>
-            <label>Password</label>
+            <label for="password">Password</label>
             <input type="password" id="password" name="password" onChange={this.changePassword}/>
             <input type="submit" value="Submit" />
           </form>
@@ -95,9 +95,9 @@ class SignInPage extends React.Component {
         <h2 style={{padding:"10px"}}>Sign In</h2>
         {this.state.message&&<p className="errorMessage">{this.state.message}</p>}
         <form onSubmit={this.submit} style={{display:"flex",flexDirection:"column",alignItems:"stretch"}}>
-          <label>Username or Email</label>
+          <label for="username">Username or Email</label>
           <input type="text" id="username" name="username" onChange={this.changeUsername}/>
-          <label>Password</label>
+          <label for="password">Password</label>
           <input type="password" id="password" name="password" onChange={this.changePassword}/>
           <input type="submit" value="Submit" />
         </form>

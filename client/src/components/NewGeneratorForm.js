@@ -60,7 +60,7 @@ class NewGeneratorForm extends React.Component{
   render(){
     return(
       <div className="popupBackground" style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
-        <div className="NewGeneratorForm" style={{display:"flex",flexDirection:"column",width:"calc(100vw - 20px)",maxWidth:"500px",height:"calc(100vh - 70px)",maxHeight:"500px"}}>
+        <div className="NewGeneratorForm" style={{display:"flex",flexDirection:"column",width:"calc(100vw - 20px)",maxWidth:"500px",height:"calc(100vh - 150px)",maxHeight:"500px"}}>
           <h2 style={{padding:"10px"}}>New Generator</h2>
           {this.state.msg&&<p className="errorMessage">{this.state.msg}</p>}
           <form onSubmit={this.submit} style={{display:"flex",height:"100%",flexDirection:"column",alignItems:"stretch"}}>

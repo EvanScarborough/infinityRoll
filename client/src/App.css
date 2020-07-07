@@ -113,8 +113,9 @@ a{
 .genListButton{
   background-color: var(--maincolor);
   width:50px;
+  max-width: 10vw;
+  max-height: 10vw;
   height:50px;
-  min-height:50px;
   border-radius: 50%;
   box-shadow: 0px 3px 8px var(--shadowcolor);
 }
@@ -259,6 +260,11 @@ a{
   padding: 8px;
   border-radius: 8px;
   margin-top: 6px;
+}
+input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 

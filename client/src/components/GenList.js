@@ -18,7 +18,7 @@ class GenListing extends React.Component {
   render(){
     const name = this.props.info.name.replace(/_/g,' ');
     return (
-      <div className="GenListing fadeInUp" style={{width:BOXSIZESTR,height:BOXSIZESTR,maxWidth:"calc(50vw - 50px)",maxHeight:"calc(50vw - 50px)",overflow:"hidden",margin:"10px",display:"flex",flexDirection:"column",alignItems:"stretch"}}>
+      <div className="GenListing fadeInUp" style={{width:BOXSIZESTR,height:BOXSIZESTR,maxWidth:"calc(50vw - 20px)",maxHeight:"calc(50vw - 20px)",overflow:"hidden",margin:"10px",display:"flex",flexDirection:"column",alignItems:"stretch"}}>
         <div className="genListBackground" style={{backgroundImage:'url('+this.props.info.background+')',height:"50%",marginBottom:"-25px",display:"flex",alignItems:"center",justifyContent:"center"}}>
           <h3 style={{marginBottom:"5px"}}>{name}</h3>
         </div>
