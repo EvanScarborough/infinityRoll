@@ -108,7 +108,7 @@ class AddItemPopup extends React.Component{
             <textarea id="item" name="item" onChange={this.changeItemText} style={{flex:"1",resize:"none"}}></textarea>
             <div style={{display:"flex",alignItems:"center"}}>
               <label style={{marginRight:"10px"}}>Multiplicity</label>
-              <input type="number" id="multiplicity" name="multiplicity" step="1" value="1" onChange={this.changeMultiplicity}/>
+              <input type="number" id="multiplicity" name="multiplicity" step="1" defaultValue="1" min="1" onChange={this.changeMultiplicity}/>
             </div>
             <input type="submit" value="Submit" />
           </form>
@@ -150,7 +150,7 @@ class GenItemList extends React.Component {
     this.addItem = this.addItem.bind(this);
   }
   addItem(item){
-    this.props.addItem(item);
+    if(item){this.props.addItem(item);}
     this.setState({addItem:false});
   }
   render(){

@@ -26,7 +26,7 @@ class MainPage extends React.Component {
   }
 
   addGenerator(gen){
-    this.props.history.push("/gen/"+gen);
+    if(gen){this.props.history.push("/gen/"+gen);}
     this.setState({newGen:false});
   }
 
